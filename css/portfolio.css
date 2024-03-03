@@ -891,9 +891,3 @@ ul .theme-icon .theme-btn:hover {
   -o-transform: translateX(100%);
 }
 }
-
-@keyframes hideLoading {
-  to {
-    
-  }
-}
