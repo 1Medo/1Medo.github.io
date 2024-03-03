@@ -1,0 +1,208 @@
+@media (max-width: 767.98px) { 
+  .container {
+    height: auto;
+  }
+    /* Header */
+    .header .container {
+        position: relative;
+    }
+
+    ul {
+        display: none;
+        flex-wrap: wrap;
+        position: absolute;
+        background-color: var(--secondColor);
+        top: 100%;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: fit-content;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 0 0 1px;
+}
+    ul li {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 1%;
+}
+
+ul li a {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+    ul li:hover a{
+        color: var(--primaryColor);
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+}
+
+    .menu {
+        display: flex;
+    }
+
+    .theme-icon {
+        background-color: var(--firstColor);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+.theme-btn {
+    width: 100%;
+}
+/* End Header */
+/* Start Landing */
+.landing .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    height: fit-content;
+}
+.landing .container .title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.social-box {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+.social-box a {
+    background-color: transparent;
+    padding: 0;
+    color: var(--primaryColor);
+    font-size: 23px;
+}
+
+.landing .container .title-box .title, 
+.landing .container .title-box p {
+    text-align: center;
+}
+
+
+.social-box::before,
+.social-box::after {
+  display: none;
+}
+/*  */
+  .social-box a:hover {
+    color: var(--fourthColor);
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .social-box a:focus {
+    color: var(--fourthColor);
+    background-color: var(--secondColor);
+    box-shadow: none;
+  }
+
+  .social-box .twitter,
+  .social-box .upwork {
+    display: none;
+  }
+  /* End Landing */
+  /* Start About */
+  .big {
+    display: none;
+  }
+.data-box {
+    justify-content: center;
+    flex-direction: column;
+}
+.data-box div {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about .container .data-box .second {
+    border-bottom: 1px solid var(--secondColor);
+    border-top: 1px solid var(--secondColor);
+    padding-bottom: 40px;
+  }
+  .about .container .data-box .second h3 {
+    padding: 0;
+    margin: 0;
+  }
+/* End About */
+/* Start Services */
+.second-ser::before,
+.second-ser::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background-color: var(--thirdColor);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.second-ser::before{
+  top: -10px;
+}
+.second-ser::after {
+  bottom: -10px;
+}
+
+.ser-box .second-ser :first-child,
+.ser-box .third-ser :first-child {
+  margin-top: 20px;
+}
+/* portfolio */
+.portfolio .container .portfolio-boxs {
+  grid-template-columns: 300px ;
+}
+.portfolio .container .portfolio-boxs .box{
+  height: 150px;
+}
+/* contact */
+
+.contact .container form {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "name"
+                        "email"
+                        "number"
+                        "budget"
+                        "message";
+                        gap: 20px;
+                        padding: 20px;
+}
+/* footer */
+.footer .container {
+  text-align: center;
+  font-size: 13px;
+}
+
+}
