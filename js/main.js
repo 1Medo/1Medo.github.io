@@ -84,8 +84,7 @@ function startCount(el) {
 window.addEventListener("load", () => {
     const loader = document.querySelector(".the-loading");
     loader.classList.add("loading");
-  
-    document.querySelector(".the-loading .ten").addEventListener("animationend", () => {
-      loader.remove();
-    });
-  });
+});
+document.querySelector(".the-loading .ten").addEventListener("animationend", () => {
+    document.querySelector(".the-loading").remove();
+});

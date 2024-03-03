@@ -804,7 +804,7 @@ ul .theme-icon .theme-btn:hover {
 
 /* HEREEEE */
 /* Loading Screen */
-.loading {
+.the-loading {
   width: 100%;
   position: fixed;
   top: 0;
@@ -817,7 +817,8 @@ ul .theme-icon .theme-btn:hover {
   align-items: center;
 }
 
-.loading div {
+
+.the-loading div {
   background-color: #51535D;
   width: 110%;
   height: 10%;
