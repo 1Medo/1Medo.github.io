@@ -80,18 +80,12 @@ function startCount(el) {
     }, 1000 / goal);
 }
 
-// loading
-const loadingElements = document.querySelectorAll('.loading div');
 
-// تحديد عنصر الـ loading الذي سيتم استخدامه لتحديد نهاية الأنميشن
-const lastLoadingElement = loadingElements[loadingElements.length - 1];
-
-// تحديد الوظيفة التي ستتم تنفيذها بعد انتهاء الأنميشن
-function handleAnimationEnd() {
-    // إزالة العناصر من DOM
-    document.querySelector('.loading').remove();
-    // يمكنك أيضًا استخدام lastLoadingElement.remove() لإزالة عنصر واحد فقط بدلاً من .loading.remove()
-}
-
-// إضافة مستمع الحدث لعنصر lastLoadingElement
-lastLoadingElement.addEventListener('animationend', handleAnimationEnd);
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".the-loading");
+    loader.classList.add("loading");
+  
+    document.querySelector(".the-loading .ten").addEventListener("animationend", () => {
+      loader.remove();
+    });
+  });
