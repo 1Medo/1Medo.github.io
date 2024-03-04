@@ -796,11 +796,8 @@ ul .theme-icon .theme-btn:hover {
   border-top: 2px solid var(--secondColor);
   padding: 20px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: var(--fourthColor);
   font-size: 18px;
 }
-
-/* HEREEEE */
-/* Loading Screen */
