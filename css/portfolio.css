@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
+    padding-right: 0 !important;
 }
 
 body::before {
@@ -576,6 +577,8 @@ ul .theme-icon .theme-btn:hover {
 .tech-stack {
     margin-top: 40px;
     width: 100%;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tech-stack h3 {
@@ -592,6 +595,8 @@ ul .theme-icon .theme-btn:hover {
     gap: 15px;
     justify-content: center;
     width: 100%;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .tech-item {
@@ -599,17 +604,15 @@ ul .theme-icon .theme-btn:hover {
     align-items: center;
     gap: 8px;
     background: rgba(12, 13, 17, 0.8);
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(96, 81, 155, 0.2);
     padding: 10px 20px;
     border-radius: 25px;
     color: var(--thirdColor);
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .tech-item:hover {
-    transform: translateY(-3px);
     background: var(--primaryColor);
     color: var(--firstColor);
     border-color: var(--primaryColor);
@@ -710,6 +713,33 @@ ul .theme-icon .theme-btn:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .tech-stack {
+        margin-top: 20px;
+    }
+
+    .tech-icons {
+        gap: 8px;
+    }
+
+    .tech-item {
+        padding: 6px 12px;
+        font-size: 12px;
+        background: rgba(12, 13, 17, 0.95);
+        backdrop-filter: none;
+        transform: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .tech-item:hover {
+        transform: none;
+        background: var(--primaryColor);
+        color: var(--firstColor);
+    }
+
+    .tech-item i {
+        font-size: 16px;
+    }
+
     .stat-card {
         padding: 20px;
     }
@@ -724,20 +754,24 @@ ul .theme-icon .theme-btn:hover {
     }
 }
 
-/* Number Animation */
-@keyframes countUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .tech-icons {
+        gap: 6px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.num.animate {
-    animation: countUp 0.5s ease forwards;
+    .tech-item {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .tech-item i {
+        font-size: 14px;
+    }
+
+    .highlight-box {
+        margin: 20px auto;
+        text-align: center;
+    }
 }
 /* End About */
 /* End About Stats */
@@ -920,7 +954,6 @@ ul .theme-icon .theme-btn:hover {
     .about .timeline-content p {
         font-size: 14px;
     }
-
 }
 /* End Services */
 /* Start Services */
