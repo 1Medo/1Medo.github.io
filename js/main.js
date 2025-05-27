@@ -367,24 +367,13 @@ const budgetInput = document.querySelector('.budget-input input');
 budgetInput.addEventListener('input', function(e) {
     // Remove any non-numeric characters
     this.value = this.value.replace(/[^0-9]/g, '');
-    
-    // Format the number with commas
-    if (this.value) {
-        const number = parseInt(this.value);
-        this.value = number.toLocaleString();
-    }
 });
 
 budgetInput.addEventListener('focus', function() {
-    // Remove commas when focused for easier editing
-    this.value = this.value.replace(/,/g, '');
+    // No need to remove commas since we're not adding them anymore
 });
 
 budgetInput.addEventListener('blur', function() {
-    // Add commas back when not focused
-    if (this.value) {
-        const number = parseInt(this.value.replace(/,/g, ''));
-        this.value = number.toLocaleString();
-    }
+    // No need to add commas back since we're not using them
 });
 
