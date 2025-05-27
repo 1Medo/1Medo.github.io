@@ -253,7 +253,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get the active contact method
         const activeButton = document.querySelector('.contact-btn.active');
         if (!activeButton) {
-            alert('Please select a contact method');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please select a contact method',
+                confirmButtonColor: '#27ad82'
+            });
             return;
         }
         
@@ -263,12 +268,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (method === 'whatsapp') {
             if (!/^\+?[1-9]\d{9,14}$/.test(contactValue)) {
-                alert('Please enter a valid WhatsApp number');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Input',
+                    text: 'Please enter a valid WhatsApp number',
+                    confirmButtonColor: '#27ad82'
+                });
                 return;
             }
         } else {
             if (!contactValue.trim()) {
-                alert('Please enter your Discord username');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Input',
+                    text: 'Please enter your Discord username',
+                    confirmButtonColor: '#27ad82'
+                });
                 return;
             }
         }
@@ -295,6 +310,15 @@ Message: ${formData.message}
         `;
 
         try {
+            // Show loading state
+            Swal.fire({
+                title: 'Sending Message...',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
             // Send to Telegram bot
             const botToken = '7761272529:AAE4wE_U_5cbAYlZAGWtfYcPCiGnMv9B3yk';
             const chatId = '1770234192';
@@ -313,7 +337,12 @@ Message: ${formData.message}
             });
 
             if (response.ok) {
-                alert('Message sent successfully! I will contact you soon.');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'I will contact you soon.',
+                    confirmButtonColor: '#27ad82'
+                });
                 form.reset();
                 contactButtons.forEach(btn => btn.classList.remove('active'));
                 contactContainer.classList.add('hidden');
@@ -322,7 +351,12 @@ Message: ${formData.message}
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Sorry, there was an error sending your message. Please try again later.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Sorry, there was an error sending your message. Please try again later.',
+                confirmButtonColor: '#27ad82'
+            });
         }
     });
 });
