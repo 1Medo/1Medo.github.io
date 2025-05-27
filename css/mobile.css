@@ -4,27 +4,26 @@
   }
     /* Header */
     .header .container {
-        position: relative;
+        padding: 0 15px;
+    }
+
+    .header.scrolled ul {
+        background: rgba(12, 13, 17, 0.95);
     }
 
     ul {
         display: none;
         flex-wrap: wrap;
-        position: absolute;
-        background-color: var(--secondColor);
-        top: 100%;
-        left: 10px;
-        width: calc(100% - 20px);
-        height: fit-content;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        box-shadow: 0 0 1px;
+        position: fixed;
+        background: rgba(12, 13, 17, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
     ul li {
         width: 100%;
@@ -38,6 +37,7 @@ ul li a {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+    width: 100%;
 }
 
     ul li:hover a{
@@ -188,7 +188,7 @@ ul li a {
 /* contact */
 
 .contact .container form {
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "name"
