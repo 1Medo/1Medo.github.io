@@ -234,12 +234,12 @@ document.addEventListener('DOMContentLoaded', function() {
             contactInput.className = `contact-input ${method}`;
             contactInput.placeholder = method === 'whatsapp' 
                 ? 'Enter your WhatsApp number (e.g., +1234567890)' 
-                : 'Enter your Discord username (e.g., username#1234)';
+                : 'Enter your Discord username';
             
             // Update input pattern for validation
             contactInput.pattern = method === 'whatsapp' 
                 ? '^\\+?[1-9]\\d{9,14}$' 
-                : '^.{3,32}#[0-9]{4}$';
+                : '.*'; // Accept any text for Discord
             
             // Show input container with animation
             contactContainer.classList.remove('hidden');
@@ -267,8 +267,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
         } else {
-            if (!/^.{3,32}#[0-9]{4}$/.test(contactValue)) {
-                alert('Please enter a valid Discord username (e.g., username#1234)');
+            if (!contactValue.trim()) {
+                alert('Please enter your Discord username');
                 return;
             }
         }
