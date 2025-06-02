@@ -112,6 +112,39 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Initialize lightGallery for each gallery container
+    document.querySelectorAll('.gallery-container').forEach(container => {
+        lightGallery(container, {
+            selector: '.gallery-item',
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            download: false,
+            thumbnail: true,
+            animateThumb: true,
+            zoomFromOrigin: true,
+            allowMediaOverlap: false,
+            toggleThumb: true,
+            appendSubHtmlTo: '.lg-outer',
+            addClass: 'lg-custom-theme',
+        });
+    });
+
+    // Handle "View Project" button clicks
+    document.querySelectorAll('.view-project').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const galleryId = button.getAttribute('data-gallery');
+            const galleryContainer = document.getElementById(galleryId);
+            if (galleryContainer) {
+                // Find the first gallery item and trigger its click
+                const firstItem = galleryContainer.querySelector('.gallery-item');
+                if (firstItem) {
+                    firstItem.click();
+                }
+            }
+        });
+    });
 });
 
 // Timeline Animation

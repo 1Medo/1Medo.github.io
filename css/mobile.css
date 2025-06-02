@@ -9,6 +9,7 @@
 
     .header.scrolled ul {
         background: rgba(12, 13, 17, 0.95);
+        margin: 0;
     }
 
     ul {
@@ -94,6 +95,7 @@ ul li a {
     padding: 0;
     color: var(--primaryColor);
     font-size: 23px;
+    border: none;
 }
 
 .landing .container .title-box .title, 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -16,9 +17,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <title>AboElward Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/logo/2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css">
 </head>
 <body>
-    <!-- Start Header -->
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="lottie-container"></div>
+    </div>
+
     <div class="opening">
         <span class="first"></span>
         <span class="second"></span>
@@ -39,8 +47,7 @@
             </button>
         </div>
     </div>
-    <!-- End Header -->
-    <!-- Start Landing -->
+
     <div class="landing">
         <div class="container">
             <div class="title-box">
@@ -55,8 +62,8 @@
                 <a href="https://discord.com/users/475649376396509196" class="discord" target="_blank">
                     <i class="fa-brands fa-discord"></i>
                 </a>
-                <a href="https://twitter.com/1Medo6" class="twitter" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://github.com/1Medo" class="github" target="_blank">
+                    <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://www.instagram.com/mohamed.aboelward/" class="instagram" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
@@ -79,8 +86,7 @@
             </div>
         </div>
     </div>
-    <!-- End Landing -->
-    <!-- Start About -->
+
     <div class="about" id="about">
         <div class="big">About</div>
         <div class="container">
@@ -149,8 +155,7 @@
             </div>
         </div>
     </div>
-    <!-- End About -->
-    <!-- Start Services -->
+
     <div class="services" id="services">
         <div class="big">Services</div>
         <div class="container">
@@ -164,7 +169,7 @@
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <h3>Web Development</h3>
-                    <p>Creating responsive, modern websites using HTML5, CSS3, and JavaScript ES6. Focus on performance and user experience.</p>
+                    <p>Creating responsive, modern websites using HTML5, CSS3, JavaScript ES6, React, and more. Focus on performance and user experience.</p>
                     <div class="service-features">
                         <div class="feature-item">
                             <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
@@ -226,14 +231,12 @@
                 </div>
             </div>
 
-            <!-- Modern Timeline Section -->
             <section class="timeline-section">
                 <div class="timeline-container">
                     <div class="timeline-header">
                         <h2>What I Create</h2>
                     </div>
                     <div class="timeline-items">
-                        <!-- Professional Websites -->
                         <div class="timeline-item">
                             <div class="timeline-date">
                                 <span>Professional Websites</span>
@@ -250,13 +253,12 @@
                                 <div class="timeline-preview">
                                     <img src="/imgs/websites.jpg" alt="Professional Website Example">
                                     <div class="preview-overlay">
-                                        <a href="#" class="preview-btn">View Examples</a>
+                                        <a href="#portfolio" class="preview-btn">View Examples</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Website Templates -->
                         <div class="timeline-item">
                             <div class="timeline-date">
                                 <span>Website Templates</span>
@@ -272,13 +274,12 @@
                                 <div class="timeline-preview">
                                     <img src="/imgs/templates.jpg" alt="Template Example">
                                     <div class="preview-overlay">
-                                        <a href="#" class="preview-btn">View Examples</a>
+                                        <a href="#portfolio" class="preview-btn">View Examples</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Enhance Existing Websites -->
                         <div class="timeline-item">
                             <div class="timeline-date">
                                 <span>Enhance Existing Websites</span>
@@ -294,13 +295,12 @@
                                 <div class="timeline-preview">
                                     <img src="/imgs/enhance.jpg" alt="Website Enhancement Example">
                                     <div class="preview-overlay">
-                                        <a href="#" class="preview-btn">View Examples</a>
+                                        <a href="#portfolio" class="preview-btn">View Examples</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- UI/UX Design -->
                         <div class="timeline-item">
                             <div class="timeline-date">
                                 <span>UI/UX Design</span>
@@ -316,13 +316,12 @@
                                 <div class="timeline-preview">
                                     <img src="/imgs/uiux.jpg" alt="UI/UX Design Example">
                                     <div class="preview-overlay">
-                                        <a href="#" class="preview-btn">View Examples</a>
+                                        <a href="#portfolio" class="preview-btn">View Examples</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Graphic Design -->
                         <div class="timeline-item">
                             <div class="timeline-date">
                                 <span>Graphic Design</span>
@@ -349,8 +348,7 @@
             </section>
         </div>
     </div>
-    <!-- End Services -->
-    <!-- Start Portfolio -->
+
     <div class="portfolio" id="portfolio">
         <div class="big">Portfolio</div>
         <div class="container">
@@ -365,28 +363,54 @@
             </div>
             
             <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item" data-category="web">
+                <div class="portfolio-item" data-category="web ui">
                     <div class="portfolio-content">
                         <img src="imgs/portify.jpg" alt="Portify website">
                         <div class="item-overlay">
                             <div class="item-details">
                                 <span class="category">UI/UX Design & Web Development</span>
                                 <h3>Branded Email Platform</h3>
-                                <p>Clean, responsive design with modern frontend tech.</p>
+                                <p>responsive design with modern frontend tech.</p>
                                 <div class="item-tags">
                                     <span>Responsive Design</span>
                                 </div>
-                                <a href="https://portify.net" class="view-project" target="_blank">
-                                    <span>View Project</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
+                                <div class="item-actions">
+                                    <div class="gallery-container" id="gallery1">
+                                        <a href="imgs/portify_imgs/1.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/1.jpg" alt="Portify" style="display: none;">
+                                        </a>
+                                        <a href="imgs/portify_imgs/2.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/2.jpg" alt="Responsive Design" style="display: none;">
+                                        </a>
+                                        <a href="imgs/portify_imgs/3.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/3.jpg" alt="Clean Code" style="display: none;">
+                                        </a>
+                                        <a href="imgs/portify_imgs/4.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/4.jpg" alt="Simple, Modern UI" style="display: none;">
+                                        </a>
+                                        <a href="imgs/portify_imgs/5.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/5.jpg" alt="Google Analytics" style="display: none;">
+                                        </a>
+                                        <a href="imgs/portify_imgs/6.jpg" class="gallery-item">
+                                            <img src="imgs/portify_imgs/6.jpg" alt="Contact Me" style="display: none;">
+                                        </a>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" class="view-project" data-gallery="gallery1">
+                                            <span>View Project</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <a href="https://portify.net" class="visit-site" target="_blank">
+                                            <span>Visit Website</span>
+                                            <i class="fa-solid fa-external-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="portfolio-item" data-category="web ui">
                     <div class="portfolio-content">
                         <img src="/imgs/TechWorld.jpg" alt="Mobile App Design">
@@ -394,13 +418,33 @@
                             <div class="item-details">
                                 <span class="category">UI/UX Design & Web Development</span>
                                 <h3>Tech Store Template</h3>
-                                <p>A modern and responsive e-commerce template designed for electronics stores.</p>
+                                <p>Modern responsive e-commerce template for electronics stores.</p>
                                 <div class="item-tags">
                                     <span>HTML5</span>
                                     <span>CSS3</span>
                                     <span>JavaScript</span>
                                 </div>
-                                <a href="#" class="view-project">
+                                <div class="gallery-container" id="gallery2">
+                                    <a href="/imgs/techworld/1.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/1.jpg" alt="TechWorld Main" style="display: none;">
+                                    </a>
+                                    <a href="/imgs/techworld/2.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/2.jpg" alt="TechWorld Products" style="display: none;">
+                                    </a>
+                                    <a href="/imgs/techworld/3.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/3.jpg" alt="TechWorld Mobile" style="display: none;">
+                                    </a>
+                                    <a href="/imgs/techworld/4.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/4.jpg" alt="TechWorld Mobile" style="display: none;">
+                                    </a>
+                                    <a href="/imgs/techworld/5.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/5.jpg" alt="TechWorld Mobile" style="display: none;">
+                                    </a>
+                                    <a href="/imgs/techworld/6.jpg" class="gallery-item">
+                                        <img src="/imgs/techworld/6.jpg" alt="TechWorld Mobile" style="display: none;">
+                                    </a>
+                                </div>
+                                <a href="#" class="view-project" data-gallery="gallery2">
                                     <span>View Project</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -409,11 +453,134 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="ui">
+                    <div class="portfolio-content">
+                        <img src="imgs/amman_ui/main.jpg" alt="AMMAN UI">
+                        <div class="item-overlay">
+                            <div class="item-details">
+                                <span class="category">UI/UX Design</span>
+                                <h3>Application UI/UX</h3>
+                                <p>Modern mobile app design with intuitive layout and seamless user experience</p>
+                                <div class="item-tags">
+                                    <span>Figma</span>
+                                    <span>UI/UX</span>
+                                </div>
+                                <div class="gallery-container" id="gallery3">
+                                    <a href="imgs/amman_ui/1.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/1.jpg" alt="Amman Arab University" style="display: none;">
+                                    </a>
+                                    <a href="imgs/amman_ui/2.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/2.jpg" alt="Login Page" style="display: none;">
+                                    </a>
+                                    <a href="imgs/amman_ui/3.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/3.jpg" alt="Loading Page" style="display: none;">
+                                    </a>
+                                    <a href="imgs/amman_ui/4.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/4.jpg" alt="Main Page" style="display: none;">
+                                    </a>
+                                    <a href="imgs/amman_ui/5.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/5.jpg" alt="Task Popup" style="display: none;">
+                                    </a>
+                                    <a href="imgs/amman_ui/6.jpg" class="gallery-item">
+                                        <img src="imgs/amman_ui/6.jpg" alt="Contact Me" style="display: none;">
+                                    </a>
+                                </div>
+                                <a href="#" class="view-project" data-gallery="gallery3">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-content">
+                        <img src="imgs/sideprojects/main.jpg" alt="Side Projects">
+                        <div class="item-overlay">
+                            <div class="item-details">
+                                <span class="category">UI/UX Design & Web Development</span>
+                                <h3>Side Projects</h3>
+                                <p>Real problems, clean solutions — side projects with purpose.</p>
+                                <div class="item-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>React</span>
+                                    <span>API</span>
+                                </div>
+                                <div class="gallery-container" id="gallery4">
+                                    <a href="imgs/sideprojects/2.jpg" class="gallery-item">
+                                        <img src="imgs/sideprojects/2.jpg" alt="Shift Report Generator" style="display: none;">
+                                    </a>
+                                    <a href="imgs/sideprojects/3.jpg" class="gallery-item">
+                                        <img src="imgs/sideprojects/3.jpg" alt="Skyblock Farming Coins Tracker" style="display: none;">
+                                    </a>
+                                    <a href="imgs/sideprojects/4.jpg" class="gallery-item">
+                                        <img src="imgs/sideprojects/4.jpg" alt="Qyam — Night Prayer Time Calculator" style="display: none;">
+                                    </a>
+                                    <a href="imgs/sideprojects/5.jpg" class="gallery-item">
+                                        <img src="imgs/sideprojects/5.jpg" alt="Contact Me" style="display: none;">
+                                    </a>
+                                </div>
+                                <a href="#" class="view-project" data-gallery="gallery4">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web ui">
+                    <div class="portfolio-content">
+                        <img src="imgs/portfolio_journey/main.jpg" alt="Portfolio Journey">
+                        <div class="item-overlay">
+                            <div class="item-details">
+                                <span class="category">UI/UX Design & Web Development</span>
+                                <h3>Portfolio Journey</h3>
+                                <p>Before and after of my portfolio — redesigned for better UX and cleaner visuals.</p>
+                                <div class="item-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Responsive Design</span>
+                                    <span>Figma</span>
+                                </div>
+                                <div class="gallery-container" id="gallery5">
+                                    <a href="imgs/portfolio_journey/1.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/1.jpg" alt="Portfolio Journey" style="display: none;">
+                                    </a>
+                                    <a href="imgs/portfolio_journey/2.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/2.jpg" alt="New Modern Look" style="display: none;">
+                                    </a>
+                                    <a href="imgs/portfolio_journey/3.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/3.jpg" alt="Fresh identity" style="display: none;">
+                                    </a>
+                                    <a href="imgs/portfolio_journey/4.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/4.jpg" alt="Smooth Animations" style="display: none;">
+                                    </a>
+                                    </a>
+                                    <a href="imgs/portfolio_journey/5.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/5.jpg" alt="Cleaner Codebase" style="display: none;">
+                                    </a>
+                                    <a href="imgs/portfolio_journey/6.jpg" class="gallery-item">
+                                        <img src="imgs/portfolio_journey/6.jpg" alt="Contact Me" style="display: none;">
+                                    </a>
+                                    
+                                </div>
+                                <a href="#" class="view-project" data-gallery="gallery5">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="portfolio-item" data-category="graphic">
                     <div class="portfolio-content">
                         <img src="imgs/soon.jpg" alt="Soon">
-                        <div class="item-overlay">
+                        <div class="item-overlay" style="opacity: 1; transform: translateY(0);">
                             <div class="item-details">
                                 <span class="category">Graphic Design</span>
                                 <h3>Working on it</h3>
@@ -438,8 +605,7 @@
             </div>
         </div>
     </div>
-    <!-- End Portfolio -->
-    <!-- Start Contact -->
+
     <div class="contact" id="contact">
         <div class="big">Contact</div>
         <div class="container">
@@ -482,8 +648,7 @@
             </form>
         </div>
     </div>
-    <!-- End Contact -->
-    <!-- Start Footer -->
+
     <div class="footer">
         <div class="container">
             <div class="footer-content">
@@ -491,7 +656,7 @@
                 <p>Front-End Developer & UI/UX Designer passionate about creating beautiful and functional digital experiences.</p>
                 <div class="social-links">
                     <a href="https://facebook.com/profile.php?id=100086502567280" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/1Medo6" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/1Medo" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/mohamed-abo-elward-58202a289/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/mohamed.aboelward/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://wa.me/+201207548003" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -503,12 +668,16 @@
             <p>&copy; 2024 <a href="#">AboElward</a>. All Rights Reserved.</p>
         </div>
     </div>
-    <!-- End Footer -->
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="js/loading-screen.js"></script>
 </body>
 </html>
 
