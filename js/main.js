@@ -330,16 +330,19 @@ document.addEventListener('DOMContentLoaded', function() {
             budget: document.getElementById('budget').value,
             message: document.getElementById('message').value
         };
+        
 
         // Create message for Telegram
         const message = `
-New Contact Form Submission:
-Name: ${formData.name}
-Email: ${formData.email}
-Contact Method: ${formData.contactMethod}
-Contact: ${formData.contactValue}
-Budget: $${formData.budget}
-Message: ${formData.message}
+        📩 <b>New Contact Request</b>
+        
+        👤 <b>Name:</b> ${formData.name}
+        📧 <b>Email:</b> ${formData.email}
+        📱 <b>${formData.contactMethod.charAt(0).toUpperCase() + formData.contactMethod.slice(1)}:</b> ${formData.contactValue}
+        💰 <b>Budget:</b> $${formData.budget}
+        
+        📝 <b>Message:</b>
+        ${formData.message}
         `;
 
         try {
@@ -402,11 +405,4 @@ budgetInput.addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
 
-budgetInput.addEventListener('focus', function() {
-    // No need to remove commas since we're not adding them anymore
-});
-
-budgetInput.addEventListener('blur', function() {
-    // No need to add commas back since we're not using them
-});
 
