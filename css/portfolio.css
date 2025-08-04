@@ -431,6 +431,7 @@ ul .theme-icon .theme-btn:hover {
   border: 1px solid transparent;
 }
 
+
 .social-box a i {
   transition: all 0.3s ease;
 }
@@ -449,15 +450,15 @@ ul .theme-icon .theme-btn:hover {
   transform: scale(0.98);
 }
 
-.facebook {
+.tiktok {
   border-top-left-radius: 10px !important;
 }
 
-.twitter {
+.github {
   border-top-right-radius: 10px !important;
 }
 
-.phone {
+.youtube {
   border-bottom-left-radius: 10px !important;
 }
 
@@ -2686,3 +2687,10 @@ ul .theme-icon .theme-btn:hover {
         right: 0 !important;
     }
   }
+
+/* Hide email social box on mobile */
+@media (max-width: 768px) {
+  .social-box .codepen {
+    display: none;
+  }
+}
