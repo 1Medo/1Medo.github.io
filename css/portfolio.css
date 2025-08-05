@@ -2354,7 +2354,7 @@ ul .theme-icon .theme-btn:hover {
     background: var(--primaryColor);
     border-radius: 50%;
     left: -10px;
-    top: 50%;
+    top: 7%;
     transform: translateY(-50%);
     box-shadow: 0 0 20px rgba(247, 108, 91, 0.4);
 }
@@ -2411,15 +2411,9 @@ ul .theme-icon .theme-btn:hover {
     }
 
     .timeline-content::before {
-        left: 20px;
-        top: -10px;
-        transform: none;
+        display: none;
     }
 
-    .timeline-item:nth-child(even) .timeline-content::before {
-        left: 20px;
-        right: auto;
-    }
     .service-card.third{
       grid-column: span 2;
     }
